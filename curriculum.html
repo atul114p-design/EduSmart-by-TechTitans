@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curriculum - EduSmart</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="sidebar">
+<h2>EduSmart by TechTitans</h2>
+<a href="index.html">Dashboard</a>
+<a href="attendance.html">Attendance</a>
+<a href="activities.html">Activities</a>
+<a href="curriculum.html">Curriculum</a>
+<a href="reports.html">Reports</a>
+<a href="">Students</a>
+<a href="teachers.html">Teachers</a>
+
+</div>
+
+<div class="page-content">
+<header>
+<h1>Curriculum</h1>
+<p>View and manage curriculum activities</p>
+<a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+</header>
+
+<button id="open-timetable">Open Curriculum Timetable</button>
+
+<div id="timetable-modal" class="modal">
+<div class="modal-content">
+<span id="close-modal">&times;</span>
+<h2>Curriculum Timetable</h2>
+<table>
+<tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr>
+<tr><td>8:00 - 9:00</td><td>Mathematics</td><td>English</td><td>Physics</td><td>Chemistry</td><td>Computer Science</td></tr>
+<tr><td>9:00 - 10:00</td><td>English</td><td>Biology</td><td>Mathematics</td><td>History</td><td>Physics</td></tr>
+<tr><td>10:00 - 11:00</td><td>Chemistry</td><td>Physical Ed.</td><td>Computer Sci</td><td>Mathematics</td><td>Biology</td></tr>
+<tr><td>11:00 - 12:00</td><td>Break</td><td>Break</td><td>Break</td><td>Break</td><td>Break</td></tr>
+<tr><td>12:00 - 1:00</td><td>Physics</td><td>Mathematics</td><td>English</td><td>Computer Sci</td><td>History</td></tr>
+<tr><td>1:00 - 2:00</td><td>History</td><td>Chemistry</td><td>Biology</td><td>English</td><td>Mathematics</td></tr>
+<tr><td>2:00 - 3:00</td><td>Computer Sci</td><td>Physics</td><td>Chemistry</td><td>Biology</td><td>English</td></tr>
+<tr><td>3:00 - 4:00</td><td>Biology</td><td>History</td><td>Physical Ed</td><td>Physics</td><td>Computer Sci</td></tr>
+</table>
+</div>
+</div>
+<script src="script.js"></script>
+</div>
+</body>
+</html>
