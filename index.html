@@ -1,39 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard - EduSmart</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - EduSmart</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background: #f4f6f8;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #2e3b4e;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .sidebar h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #00c4cc;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #ddd;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #00c4cc;
+      color: #000;
+    }
+
+    .container {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .center-box {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      max-width: 500px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .center-box h1 {
+      margin-bottom: 25px;
+      color: #2e3b4e;
+    }
+
+    .login-btn, .google-btn {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-btn {
+      background-color: #00c4cc;
+      color: #fff;
+    }
+
+    .login-btn:hover {
+      background-color: #009ba1;
+    }
+
+    .google-btn {
+      background-color: #db4437;
+      color: #fff;
+    }
+
+    .google-btn:hover {
+      background-color: #c23321;
+    }
+
+    .register-link {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .register-link a {
+      color: #00c4cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .feature-cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 20px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #2e3b4e;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      .center-box {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .feature-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="sidebar">
-<h2>EduSmart</h2>
-<a href="index.html">Dashboard</a>
-<a href="attendance.html">Attendance</a>
-<a href="activities.html">Activities</a>
-<a href="curriculum.html">Curriculum</a>
-<a href="reports.html">Reports</a>
-<a href="student.html">Students</a>
-<a href="teachers.html">Teachers</a>
 
-</div>
+  <div class="sidebar">
+    <h2>EduSmart</h2>
+    <a href="index.html">Dashboard</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="activities.html">Activities</a>
+    <a href="curriculum.html">Curriculum</a>
+    <a href="reports.html">Reports</a>
+    <a href="student.html">Students</a>
+    <a href="teachers.html">Teachers</a>
+  </div>
 
-<div class="container">
-<div class="center-box">
-<h1>Welcome to EduSmart</h1>
-<button class="login-btn">Login to EduSmart</button><br>
-<button class="google-btn">Continue with Google</button>
-<p class="register-link">New User? <a href="#">Register Here</a></p>
-</div>
+  <div class="container">
+    <div class="center-box">
+      <h1>Welcome to EduSmart</h1>
+      <button class="login-btn">Login to EduSmart</button>
+      <button class="google-btn">Continue with Google</button>
+      <p class="register-link">New User? <a href="#">Register Here</a></p>
+    </div>
 
-<div class="feature-cards">
-<div class="card"><h3>Smart Attendance</h3><p>Automated attendance tracking with real-time updates</p></div>
-<div class="card"><h3>Curriculum Management</h3><p>Organize and track curriculum activities efficiently</p></div>
-<div class="card"><h3>Analytics & Reports</h3><p>Comprehensive insights for better decision making</p></div>
-</div>
-</div>
-<script src="script.js"></script>
+    <div class="feature-cards">
+      <div class="card">
+        <h3>Smart Attendance</h3>
+        <p>Automated attendance tracking with real-time updates</p>
+      </div>
+      <div class="card">
+        <h3>Curriculum Management</h3>
+        <p>Organize and track curriculum activities efficiently</p>
+      </div>
+      <div class="card">
+        <h3>Analytics & Reports</h3>
+        <p>Comprehensive insights for better decision making</p>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
-
